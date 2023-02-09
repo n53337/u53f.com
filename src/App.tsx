@@ -1,8 +1,6 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-
+import AppRouter from "@/utils/AppRouter";
 function App() {
-  return <h1>home</h1>;
+  return <AppRouter />;
 }
 
 export default App;
