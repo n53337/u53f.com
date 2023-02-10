@@ -10,7 +10,7 @@ const Button = ({ variant, text, full, ...props }: ButtonProps) => {
   // Base Button Style
   const baseStyle = `${
     full ? "w-full" : "w-36"
-  } px-2 py-3 text-sm uppercase transition duration-300 ease-in`;
+  } px-2 py-3 text-xs md:text-sm font-medium uppercase transition duration-300 ease-in`;
 
   // Disabled Button Style
   const disableStyle = props.disabled && `cursor-not-allowed opacity-40`;
