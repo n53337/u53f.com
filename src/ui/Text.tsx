@@ -1,7 +1,7 @@
 import { ComponentProps } from "react";
 
 interface TextProps extends ComponentProps<"p"> {
-  variant: "header" | "title" | "text" | "link";
+  variant: "header" | "title" | "text" | "link" | "shell";
   size?: number;
 }
 
@@ -31,6 +31,13 @@ const Text = ({ variant, size, children, ...props }: TextProps) => {
     <p
       {...props}
       className={`text-xs md:text-sm font-medium uppercase tracking-widest text-black cursor-pointer hover:text-gray-400 ${props.className}`}
+    >
+      {children}
+    </p>
+  ) : variant === "shell" ? (
+    <p
+      {...props}
+      className={`text-xs md:text-sm font-normal text-slate-900 ${props.className}`}
     >
       {children}
     </p>
