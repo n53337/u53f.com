@@ -1,11 +1,10 @@
 import NavBar from "@/components/shared/NavBar";
-import Button from "@/ui/Button";
-import Text from "@/ui/Text";
-
+import Hero from "@/components/home/Hero";
 const Home = () => {
   return (
-    <main className="container">
+    <main className="container h-screen min-h-screen">
       <NavBar />
+      <Hero />
     </main>
   );
 };

@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      lineHeight: {
+        header: "5rem",
+      },
+    },
     container: {
       center: true,
       padding: {

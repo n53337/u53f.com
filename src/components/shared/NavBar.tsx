@@ -12,7 +12,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="flex justify-between items-center py-6 relative">
+    <header className="flex justify-between items-center py-6 md:py-12 relative">
       <Link to="/">
         <img src={logo} alt="u53f logo" className="w-8 md:w-12" />
       </Link>
@@ -35,7 +35,7 @@ const NavBar = () => {
 
       {/* Mobile Navbar */}
       <div className="md:hidden ">
-        {isTriggered ? (
+        {!isTriggered ? (
           <Bars3BottomRightIcon
             className="w-8 cursor-pointer hover:text-gray-500"
             onClick={handleNavTrigger}
@@ -49,7 +49,7 @@ const NavBar = () => {
 
         <nav
           className={`${
-            isTriggered && "hidden"
+            !isTriggered && "hidden"
           } absolute left-0 right-0 mt-2 py-4 bg-white flex flex-col items-center gap-6 transition-all`}
         >
           <Link to="#">
