@@ -37,7 +37,7 @@ const Text = ({ variant, size, children, ...props }: TextProps) => {
   ) : variant === "shell" ? (
     <p
       {...props}
-      className={`text-xs md:text-sm font-normal text-slate-900 ${props.className}`}
+      className={`text-xs md:text-sm font-medium text-slate-900 ${props.className}`}
     >
       {children}
     </p>
