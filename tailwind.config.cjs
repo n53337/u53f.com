@@ -2,11 +2,6 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      lineHeight: {
-        header: "5rem",
-      },
-    },
     container: {
       center: true,
       padding: {
@@ -15,6 +10,11 @@ module.exports = {
         lg: "4rem",
         xl: "5rem",
         "2xl": "6rem",
+      },
+    },
+    extend: {
+      lineHeight: {
+        header: "5rem !important",
       },
     },
   },

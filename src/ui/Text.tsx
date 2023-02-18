@@ -9,7 +9,7 @@ const Text = ({ variant, size, children, ...props }: TextProps) => {
   return variant === "header" ? (
     <h1
       {...props}
-      className={`text-3xl md:text-5xl font-bold text-black  ${props.className}`}
+      className={`text-3xl md:text-5xl font-bold text-black md:leading-header ${props.className}`}
     >
       {children}
     </h1>

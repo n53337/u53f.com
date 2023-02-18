@@ -1,5 +1,5 @@
 import { ClipboardIcon, CommandLineIcon } from "@heroicons/react/24/solid";
-import React, { useReducer, useRef, useState } from "react";
+import React, { useEffect, useReducer, useRef, useState } from "react";
 import Text from "@/ui/Text";
 import { ActionReturns, ShellReducer } from "@/Store/ShellReducer";
 
@@ -12,28 +12,36 @@ const Shell = () => {
   // Input Ref
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // Input Controller
+  const [inputCtr, setInputCtr] = useState<string>("");
+
+  console.log(inputCtr);
+
   // Command Storage
   const [history, setHistory] = useState<OutputOptions[]>([]);
 
   // handle Command Submition
   const handleShellCommand = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    // clear input
+    setInputCtr("");
     // Reducer Req
-    dispatch({ command: inputRef.current?.value.toLowerCase() });
+    dispatch({ command: inputCtr.toLowerCase() });
     setHistory([...history, state]);
     if (state.command === "clear") setHistory([]);
   };
 
-  console.log(state);
+  useEffect(() => {
+    inputRef.current?.scrollIntoView();
+  }, [history]);
+
   return (
     <div className="w-full flex flex-col max-w-2xl shadow-md">
       <div className="bg-black text-white px-4 py-2 flex justify-between items-center">
         <CommandLineIcon className="w-6 " />
-        {/* <ClipboardIcon className="w-5 text-black stroke-white stroke-2 cursor-pointer" /> */}
       </div>
 
-      <div className="max-h-72 md:max-h-96 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black">
+      <div className="max-h-48 md:max-h-72 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black">
         {/* Help Command */}
 
         <div className="flex gap-2 items-center">
@@ -48,7 +56,7 @@ const Shell = () => {
         {history.length
           ? state.command != "clear" &&
             history.map((hs, hi) => {
-              return (
+              return hs.command ? (
                 <div key={hi} className="flex flex-col gap-3">
                   {/* User Commands */}
                   <div className="flex gap-2 items-center">
@@ -64,24 +72,14 @@ const Shell = () => {
                   <div className="flex flex-wrap gap-3 px-4">
                     {history[hi].output?.map((hsc) => {
                       return (
-                        <Text
-                          key={hsc}
-                          variant="shell"
-                          className={
-                            hs.type === "text"
-                              ? "text-stone-900"
-                              : hs.type === "commands"
-                              ? "text-purple-800"
-                              : "text-red-500"
-                          }
-                        >
+                        <Text key={hsc} variant="shell">
                           {hsc}
                         </Text>
                       );
                     })}
                   </div>
                 </div>
-              );
+              ) : null;
             })
           : null}
 
@@ -105,17 +103,7 @@ const Shell = () => {
           <div className="flex flex-wrap gap-3 px-4">
             {state.output?.map((hsc) => {
               return (
-                <Text
-                  key={hsc}
-                  variant="shell"
-                  className={
-                    state.type === "text"
-                      ? "text-stone-900"
-                      : state.type === "commands"
-                      ? "text-purple-800"
-                      : "text-red-500"
-                  }
-                >
+                <Text key={hsc} variant="shell">
                   {hsc}
                 </Text>
               );
@@ -133,6 +121,10 @@ const Shell = () => {
               className="w-full outline-none text-xs md:text-sm font-normal text-slate-900"
               spellCheck={false}
               ref={inputRef}
+              value={inputCtr}
+              onChange={(e: React.FormEvent<HTMLInputElement>) =>
+                setInputCtr(e.currentTarget.value)
+              }
             />
           </form>
         </div>
