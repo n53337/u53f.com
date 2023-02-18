@@ -3,7 +3,7 @@ interface ActionType {
 }
 
 export interface ActionReturns {
-  command: string | null | undefined;
+  command?: string | null | undefined;
   type?: "text" | "commands" | "error";
   output?: string[];
 }

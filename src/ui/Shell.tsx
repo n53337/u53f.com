@@ -7,25 +7,13 @@ interface OutputOptions extends ActionReturns {}
 
 const Shell = () => {
   // Shell Reducer
-  const [state, dispatch] = useReducer(ShellReducer, { command: "clear" });
+  const [state, dispatch] = useReducer(ShellReducer, {});
 
   // Input Ref
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Command Storage
-  const [history, setHistory] = useState<OutputOptions[]>([
-    { command: null, type: "commands", output: [""] },
-    {
-      command: "whoami",
-      type: "commands",
-      output: ["this is git showing ya!"],
-    },
-    {
-      command: "test",
-      type: "commands",
-      output: ["this is test"],
-    },
-  ]);
+  const [history, setHistory] = useState<OutputOptions[]>([]);
 
   // handle Command Submition
   const handleShellCommand = (e: React.FormEvent<HTMLFormElement>) => {
@@ -34,6 +22,7 @@ const Shell = () => {
     // Reducer Req
     dispatch({ command: inputRef.current?.value.toLowerCase() });
     setHistory([...history, state]);
+    if (state.command === "clear") setHistory([]);
   };
 
   console.log(state);
@@ -44,7 +33,7 @@ const Shell = () => {
         {/* <ClipboardIcon className="w-5 text-black stroke-white stroke-2 cursor-pointer" /> */}
       </div>
 
-      <div className="max-h-96 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black">
+      <div className="max-h-72 md:max-h-96 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black">
         {/* Help Command */}
 
         <div className="flex gap-2 items-center">
@@ -56,37 +45,51 @@ const Shell = () => {
 
         {/* Render History */}
 
-        {history.map((hs, hi) => {
-          return (
-            <div key={hi}>
-              {/* User Commands */}
-              <div className="flex gap-2 items-center">
-                <span className="text-xs md:text-sm font-medium text-black">
-                  ~$
-                </span>
-                <Text variant="shell" className="font-normal">
-                  {hs.command}
-                </Text>
-              </div>
-
-              {/* Output */}
-              <div className="flex flex-wrap gap-3 px-4">
-                {history[hi].output?.map((hs) => {
-                  return (
-                    <Text key={hs} variant="shell" className="text-purple-900">
-                      {hs}
+        {history.length
+          ? state.command != "clear" &&
+            history.map((hs, hi) => {
+              return (
+                <div key={hi} className="flex flex-col gap-3">
+                  {/* User Commands */}
+                  <div className="flex gap-2 items-center">
+                    <span className="text-xs md:text-sm font-medium text-black">
+                      ~$
+                    </span>
+                    <Text variant="shell" className="font-normal">
+                      {hs.command}
                     </Text>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+                  </div>
 
-        {/* Render Output */}
+                  {/* Output */}
+                  <div className="flex flex-wrap gap-3 px-4">
+                    {history[hi].output?.map((hsc) => {
+                      return (
+                        <Text
+                          key={hsc}
+                          variant="shell"
+                          className={
+                            hs.type === "text"
+                              ? "text-stone-900"
+                              : hs.type === "commands"
+                              ? "text-purple-800"
+                              : "text-red-500"
+                          }
+                        >
+                          {hsc}
+                        </Text>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })
+          : null}
 
-        {
-          <div>
+        {/* Render Current Output */}
+
+        <div className="flex flex-col gap-3">
+          {/* Input */}
+          {state.command && state.command != "clear" && (
             <div className="flex gap-2 items-center">
               <span className="text-xs md:text-sm font-medium text-black">
                 ~$
@@ -95,13 +98,30 @@ const Shell = () => {
                 {state.command}
               </Text>
             </div>
-            <div>
-              <Text variant="shell" className="text-purple-900">
-                {state.output}
-              </Text>
-            </div>
+          )}
+
+          {/* Output */}
+
+          <div className="flex flex-wrap gap-3 px-4">
+            {state.output?.map((hsc) => {
+              return (
+                <Text
+                  key={hsc}
+                  variant="shell"
+                  className={
+                    state.type === "text"
+                      ? "text-stone-900"
+                      : state.type === "commands"
+                      ? "text-purple-800"
+                      : "text-red-500"
+                  }
+                >
+                  {hsc}
+                </Text>
+              );
+            })}
           </div>
-        }
+        </div>
 
         {/* New Prompt */}
 
