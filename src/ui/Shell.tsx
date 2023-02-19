@@ -38,7 +38,7 @@ const Shell = () => {
   return (
     <div className="w-full flex flex-col max-w-2xl shadow-md">
       <div className="bg-black text-white px-4 py-2 flex justify-between items-center">
-        <CommandLineIcon className="w-6 " />
+        <CommandLineIcon className="w-6" />
       </div>
 
       <div className="max-h-48 md:max-h-72 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black">
