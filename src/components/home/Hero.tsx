@@ -10,7 +10,7 @@ const Hero = () => {
         Hey, I’m Youssef Houffaine and I love building amazing websites!
       </Text>
       <Shell />
-      <Button variant="outline" text="About Me" />
+      <Button variant="primary" text="About Me" />
     </section>
   );
 };
