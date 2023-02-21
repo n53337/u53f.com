@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <footer className="w-full bg-black ">
       <div className="container py-6 flex justify-between items-center">
-        <Link to="/">
+        <a href="#">
           <img src={logo} alt="u53f logo" className="w-8 md:w-12" />
-        </Link>
+        </a>
         <aside className="flex gap-8">
           <Link to="https://www.linkedin.com/in/youssef-houffaine-a72366252/">
             <Text variant="link" className="text-white">

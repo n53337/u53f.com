@@ -2,6 +2,7 @@ import ShowCase from "@/components/shared/ShowCase";
 import me from "@/assets/me.png";
 import Text from "@/ui/Text";
 import Button from "@/ui/Button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const left = (
@@ -23,18 +24,25 @@ const About = () => {
         helping others; I teach math classes at night for high school students.
         I’d love for you to check out my work.
       </Text>
-      <Button variant="outline" text="See Projects" />
+      <Link to="/portfolio">
+        <Button variant="outline" text="See Projects" />
+      </Link>
     </>
   );
   return (
-    <section className="py-8 lg:py-24 flex flex-col items-center gap-24">
+    <section
+      id="about"
+      className="py-8 lg:py-24 flex flex-col items-center gap-24"
+    >
       <ShowCase left={left} right={right} />
-      <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-12">
+      <div className="w-full  flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-12">
         <Text variant="title" className="text-center">
           Interested in doing a project together?
         </Text>
         <span className="hidden lg:block w-1/3 bg-gray-200 h-0.5"></span>
-        <Button variant="outline" text="Contact me" />
+        <Link to="contact">
+          <Button variant="outline" text="Contact me" />
+        </Link>
       </div>
     </section>
   );

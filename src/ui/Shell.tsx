@@ -32,7 +32,7 @@ const Shell = () => {
   };
 
   useEffect(() => {
-    inputRef.current?.scrollIntoView();
+    // inputRef.current?.scrollIntoView();
   }, [history]);
 
   return (

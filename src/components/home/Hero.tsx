@@ -2,6 +2,7 @@ import Button from "@/ui/Button";
 import Shell from "@/ui/Shell";
 import Text from "@/ui/Text";
 import { ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -10,7 +11,9 @@ const Hero = () => {
         Hey, I’m Youssef Houffaine and I love building amazing websites!
       </Text>
       <Shell />
-      <Button variant="primary" text="About Me" />
+      <a href="#about">
+        <Button variant="primary" text="About Me" />
+      </a>
     </section>
   );
 };
