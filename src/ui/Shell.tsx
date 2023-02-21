@@ -15,8 +15,6 @@ const Shell = () => {
   // Input Controller
   const [inputCtr, setInputCtr] = useState<string>("");
 
-  console.log(inputCtr);
-
   // Command Storage
   const [history, setHistory] = useState<OutputOptions[]>([]);
 
@@ -32,7 +30,7 @@ const Shell = () => {
   };
 
   useEffect(() => {
-    // inputRef.current?.scrollIntoView();
+    inputRef.current?.scrollIntoView({ block: "end", behavior: "smooth" });
   }, [history]);
 
   return (
@@ -41,7 +39,7 @@ const Shell = () => {
         <CommandLineIcon className="w-6" />
       </div>
 
-      <div className="max-h-48 md:max-h-72 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black">
+      <div className="max-h-48 md:max-h-56 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black">
         {/* Help Command */}
 
         <div className="flex gap-2 items-center">
