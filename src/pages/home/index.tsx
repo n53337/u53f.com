@@ -1,15 +1,18 @@
-import Button from "@/ui/Button";
-
+import NavBar from "@/components/shared/NavBar";
+import Hero from "@/components/home/Hero";
+import About from "@/components/home/About";
+import Footer from "@/components/shared/Footer";
 const Home = () => {
   return (
-    <div className="p-10 flex gap-12">
-      <Button
-        variant="primary"
-        text="Button"
-        onClick={() => console.log("hey")}
-      />
-      <Button variant="outline" text="Button" />
-    </div>
+    <>
+      <main className="container  min-h-screen ">
+        <NavBar />
+        <Hero />
+        <About />
+        {/* <Footer /> */}
+      </main>
+      <Footer />
+    </>
   );
 };
 

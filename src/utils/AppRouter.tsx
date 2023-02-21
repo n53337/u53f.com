@@ -1,3 +1,4 @@
+import About from "@/components/home/About";
 import Blogs from "@/pages/blog";
 import Blog from "@/pages/blog/blog";
 import Contact from "@/pages/contact";
