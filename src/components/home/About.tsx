@@ -27,8 +27,15 @@ const About = () => {
     </>
   );
   return (
-    <section className="flex flex-col items-center">
+    <section className="py-8 lg:py-24 flex flex-col items-center gap-24">
       <ShowCase left={left} right={right} />
+      <div className="w-full flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-12">
+        <Text variant="title" className="text-center">
+          Interested in doing a project together?
+        </Text>
+        <span className="hidden lg:block w-1/3 bg-gray-200 h-0.5"></span>
+        <Button variant="outline" text="Contact me" />
+      </div>
     </section>
   );
 };
