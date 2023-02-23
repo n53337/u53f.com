@@ -11,7 +11,7 @@ const Contact = () => {
         <NavBar />
         <section className="py-12 lg:py-24 flex flex-col gap-12 lg:gap-36">
           {/* Get in Touch */}
-          <div className="grid lg:grid-cols-5 gap-2">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-0">
             <Text variant="header" className="col-span-2">
               Get in Touch
             </Text>
@@ -42,7 +42,7 @@ const Contact = () => {
           </div>
 
           {/* Form */}
-          <div className="grid lg:grid-cols-5 gap-2">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-0">
             <Text variant="header" className="col-span-2">
               Contact Me
             </Text>
