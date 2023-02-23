@@ -25,6 +25,19 @@ const Overview = () => {
         <aside className="lg:w-3/4 flex flex-col gap-6 items-center lg:items-start">
           <Text variant="title">{data.brief.title}</Text>
           <Text variant="text">{data.brief.description}</Text>
+          <div className="flex gap-4">
+            {data.overview.tags.map((tag) => {
+              return (
+                <Text
+                  key={tag}
+                  variant="text"
+                  className="py-1 px-2 border border-gray-600 rounded-full"
+                >
+                  {tag}
+                </Text>
+              );
+            })}
+          </div>
           <Link to={data.overview.url}>
             <Button variant="outline" text="Visit Website" />
           </Link>
