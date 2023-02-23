@@ -30,8 +30,8 @@ const Overview = () => {
               return (
                 <Text
                   key={tag}
-                  variant="text"
-                  className="py-1 px-2 border border-gray-600 rounded-full"
+                  variant="link"
+                  className="text-purple-900 cursor-help"
                 >
                   {tag}
                 </Text>
