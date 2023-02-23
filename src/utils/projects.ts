@@ -26,13 +26,15 @@ export const projects: Projects[] = [
     brief: {
       img: uubank,
       title: "Ubank",
-      description: "test this is a descropi",
+      description:
+        "this mini project is just a placeholder for now, i will add large project later on !",
     },
     overview: {
       banner: uubank2,
       url: "https://uubank.netlify.app/",
       tags: ["html", "css", "javascript"],
-      description: "test description",
+      description:
+        "this mini project is just a placeholder for now, i will add large project later on !",
       previews: [uubank, uubank2],
     },
   },
@@ -41,13 +43,15 @@ export const projects: Projects[] = [
     brief: {
       img: cardsError,
       title: "Cards",
-      description: "test this is a descropi",
+      description:
+        "this mini project is just a placeholder for now, i will add large project later on !",
     },
     overview: {
       banner: cardsError,
-      url: "https://uubank.netlify.app/",
+      url: "https://fem-cards.netlify.app/",
       tags: ["html", "css", "javascript"],
-      description: "test description",
+      description:
+        "this mini project is just a placeholder for now, i will add large project later on !",
       previews: [cardsLoading, cardsSuccess],
     },
   },

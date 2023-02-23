@@ -21,7 +21,7 @@ const Gallery = () => {
               <>
                 <Text variant="title">{project.brief.title}</Text>
                 <Text variant="text">{project.brief.description}</Text>
-                <Link to="/portfolio">
+                <Link to={project.id}>
                   <Button variant="outline" text="view project" />
                 </Link>
               </>

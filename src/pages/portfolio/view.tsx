@@ -1,9 +1,17 @@
-import React from "react";
+import Overview from "@/components/portfolio/Overview";
+import Footer from "@/components/shared/Footer";
+import NavBar from "@/components/shared/NavBar";
 
-type Props = {};
-
-const View = (props: Props) => {
-  return <div>view</div>;
+const View = () => {
+  return (
+    <>
+      <main className="container min-h-screen">
+        <NavBar />
+        <Overview />
+      </main>
+      <Footer />
+    </>
+  );
 };
 
 export default View;

@@ -19,7 +19,7 @@ const NavBar = () => {
 
       {/* Desktop Navbar */}
       <nav className="hidden md:flex gap-10">
-        <Link to="#">
+        <Link to="/">
           <Text variant="link">home</Text>
         </Link>
         <Link to="/portfolio">
