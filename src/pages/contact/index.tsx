@@ -9,7 +9,7 @@ const Contact = () => {
     <>
       <main className="container min-h-screen">
         <NavBar />
-        <section className="py-12 lg:py-24 flex flex-col gap-12 lg:gap-36">
+        <section className="py-12 lg:py-24 flex flex-col gap-12 lg:gap-20">
           {/* Get in Touch */}
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-0">
             <Text variant="header" className="col-span-2">
@@ -41,7 +41,12 @@ const Contact = () => {
             </aside>
           </div>
 
+          {/* Divider */}
+
+          <span className="w-full h-0.5 bg-gray-200"></span>
+
           {/* Form */}
+
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-0">
             <Text variant="header" className="col-span-2">
               Contact Me
