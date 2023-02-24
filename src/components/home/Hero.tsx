@@ -10,6 +10,9 @@ const Hero = () => {
       <Text variant="header" className="text-center lg:px-16 xl:px-24">
         Hey, I’m Youssef Houffaine and I love building amazing websites!
       </Text>
+      {/* <Text variant="text" className="italic -mb-6 lg:-mb-12">
+        * For Terminal lovers:
+      </Text> */}
       <Shell />
       <a href="#about">
         <Button variant="primary" text="About Me" />

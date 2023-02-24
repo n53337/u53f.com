@@ -17,11 +17,13 @@ const Overview = () => {
     <section className="py-12 ">
       {/* Banner */}
       <figure
-        className={`w-full h-28 lg:h-80 bg-[url('${data.overview.banner}')] bg-cover bg-no-repeat bg-center brightness-50 border border-black`}
-      ></figure>
+        className={`w-full h-36 lg:h-80 overflow-hidden brightness-50 border border-black shadow-xl`}
+      >
+        <img src={data.overview.banner} alt="project banner" className="" />
+      </figure>
 
       {/* Details */}
-      <div className="py-12 lg:py-24 w-full flex flex-col xl:flex-row gap-16 divide-x-2">
+      <div className="py-12 lg:py-24 w-full flex flex-col xl:flex-row gap-16 xl:divide-x-2">
         <aside className="lg:w-3/4 flex flex-col gap-6 items-center lg:items-start">
           <Text variant="title">{data.brief.title}</Text>
           <Text variant="text">{data.brief.description}</Text>
@@ -42,7 +44,7 @@ const Overview = () => {
             <Button variant="outline" text="Visit Website" />
           </Link>
         </aside>
-        <div className="flex flex-col gap-12 px-4 items-center lg:items-start">
+        <div className="flex flex-col gap-12 xl:px-4 items-center lg:items-start">
           <div className="flex flex-col gap-6 items-center lg:items-start">
             <Text variant="title">Project Background</Text>
             <Text variant="text">{data.overview.description}</Text>
