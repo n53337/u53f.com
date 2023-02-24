@@ -52,7 +52,7 @@ const NavBar = () => {
             !isTriggered && "hidden"
           } absolute left-0 right-0 mt-2 py-4 bg-white flex flex-col items-center gap-6 transition-all z-50 shadow-xl`}
         >
-          <Link to="#">
+          <Link to="/">
             <Text variant="link">home</Text>
           </Link>
           <Link to="/portfolio">
