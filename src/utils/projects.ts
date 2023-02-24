@@ -27,14 +27,14 @@ export const projects: Projects[] = [
       img: uubank,
       title: "Ubank",
       description:
-        "**NOTE** this mini project is just a placeholder for now, i will add large project later on !",
+        "**NOTE** this mini project is just a placeholder for now, i will add a large project later on !",
     },
     overview: {
       banner: uubank2,
       url: "https://uubank.netlify.app/",
       tags: ["html", "css", "javascript"],
       description:
-        "**NOTE** this mini project is just a placeholder for now, i will add large project later on !",
+        "**NOTE** this mini project is just a placeholder for now, i will add a large project later on !",
       previews: [uubank, uubank2],
     },
   },
@@ -44,14 +44,14 @@ export const projects: Projects[] = [
       img: cardsError,
       title: "Cards",
       description:
-        "**NOTE** this mini project is just a placeholder for now, i will add large project later on !",
+        "**NOTE** this mini project is just a placeholder for now, i will add a large project later on !",
     },
     overview: {
       banner: cardsError,
       url: "https://fem-cards.netlify.app/",
       tags: ["html", "css", "javascript"],
       description:
-        "**NOTE** this mini project is just a placeholder for now, i will add large project later on !",
+        "**NOTE** this mini project is just a placeholder for now, i will add a large project later on !",
       previews: [cardsLoading, cardsSuccess],
     },
   },
