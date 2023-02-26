@@ -8,7 +8,53 @@
 
 hey this is me `usef` again trying to catch
 
-```ts
+```tsx
+const a = 2;
+console.log(a);
+code: (props) => (
+    <Text
+      variant="shell"
+      children={props.children}
+      className="inline bg-gray-300 px-1"
+    />
+  ),
+  pre: (props) => (
+    <div className="w-full flex flex-col max-w-2xl shadow-md">
+      <div className="bg-black text-white px-4 py-2 flex justify-between items-center">
+        <CommandLineIcon className="w-6" />
+        <Text
+          variant="shell"
+          children={props.children.props.className.slice(9)}
+          className="text-white"
+        />
+      </div>
+      <div
+        // onClick={() => console.log(props.children.props.className.slice(9))}
+        className="max-h-48 md:max-h-56 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black"
+      >
+        {props.children.props.children.split("\n").map((e: string) => (
+          <Text key={e} variant="shell" children={e} />
+        ))}
+      </div>
+    </div>
+  ),
+```
+
+> this is a quote
+
+- asterisks for **unordered** items
+
+`asd` asdasd asd as asd ads asd `knnlnknkkk` lkmkmm [LinkedIn](https://www.linkedin.com/in/youssef-houffaine-a72366252/)
+
+## Title
+
+![Image](https://raw.githubusercontent.com/n53337/n53337/master/man.gif)
+
+    - Your future employee on [LinkedIn](https://www.linkedin.com/in/youssef-houffaine-a72366252/)
+
+hey this is me `usef` again trying to catch
+
+```tsx
 const a = 2;
 console.log(a);
 code: (props) => (

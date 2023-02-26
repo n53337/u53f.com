@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { CommandLineIcon } from "@heroicons/react/24/solid";
 
 const MDXComponent: MDXComponents = {
-  h1: (props) => <Text variant="header" children={props.children} />,
+  h1: (props) => (
+    <Text variant="header" children={props.children} className="text-center" />
+  ),
   h2: (props) => <Text variant="title" children={props.children} />,
   p: (props) => (
     <Text variant="text" children={props.children} className="opacity-100" />
@@ -42,7 +44,7 @@ const MDXComponent: MDXComponents = {
     />
   ),
   pre: (props) => (
-    <div className="w-full flex flex-col max-w-2xl shadow-md">
+    <div className="w-full flex flex-col max-w-2xl shadow-md mx-auto">
       <div className="bg-black text-white px-4 py-2 flex justify-between items-center">
         <CommandLineIcon className="w-6" />
         <Text
@@ -54,10 +56,7 @@ const MDXComponent: MDXComponents = {
           className="text-white"
         />
       </div>
-      <div
-        // onClick={() => console.log(props.children.props.className.slice(9))}
-        className="max-h-48 md:max-h-96 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black"
-      >
+      <div className="max-h-48 md:max-h-96 flex flex-col gap-3 overflow-auto bg-white text-black p-4 border border-black">
         {props.children.props.children &&
           props.children.props.children
             .split("\n")
@@ -67,6 +66,7 @@ const MDXComponent: MDXComponents = {
       </div>
     </div>
   ),
+  img: (props) => <img src={props.src} className="mx-auto" />,
 };
 
 export default MDXComponent;
