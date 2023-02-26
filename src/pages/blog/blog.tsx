@@ -1,9 +1,23 @@
-import React from "react";
+import NavBar from "@/components/shared/NavBar";
+import Footer from "@/components/shared/Footer";
+import { useParams } from "react-router-dom";
+import { blogs } from "@/utils/blogs";
+import Text from "@/ui/Text";
+import BlogRender from "@/components/blog/BolgRender";
 
-type Props = {};
+const Blog = () => {
+  const a = `<Text variant="header">hey</Text>
+  <Text variant="text">asd</Text>`;
 
-const Blog = (props: Props) => {
-  return <div>blog</div>;
+  return (
+    <>
+      <main className="container min-h-screen">
+        <NavBar />
+        <BlogRender />
+      </main>
+      <Footer />
+    </>
+  );
 };
 
 export default Blog;

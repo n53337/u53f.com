@@ -22,7 +22,7 @@ const BlogsWrapper = () => {
                 <Text variant="title">{blog.title}</Text>
                 <Text variant="text">{blog.description}</Text>
                 <Link to={blog.id.replace(" ", "-")}>
-                  <Button variant="outline" text="view project" />
+                  <Button variant="outline" text="Read" />
                 </Link>
               </>
             }

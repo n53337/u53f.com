@@ -70,17 +70,7 @@ export const blogs: Blogs[] = [
     title: "test 2's title",
     description: "test 2 description",
     banner: uubank2,
-    content: `
-    # Hey there ⌨️
-
-    <p align="center">
-    <img src="https://raw.githubusercontent.com/n53337/n53337/master/man.gif" alt="Welcome" style="width:100%">
-    </p>
-
-    <p align="center">
-      Visitor count<br>
-      <img src="https://profile-counter.glitch.me/sagar-viradiya/count.svg" />
-    </p>
+    content: `# Hey there ⌨️
 
     ## About me
 
