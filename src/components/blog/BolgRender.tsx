@@ -1,9 +1,7 @@
-import { MDXProvider, useMDXComponents } from "@mdx-js/react";
 import MDXComponent from "@/utils/MDXComponent";
 import me from "@/assets/me.png";
 import Text from "@/ui/Text";
 import { Blogs } from "@/utils/blogs";
-import Mark from "../../../mark.mdx";
 import { createElement } from "react";
 
 const BlogRender = ({ banner, content, date, readTime }: Blogs) => {

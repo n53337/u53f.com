@@ -6,9 +6,6 @@ import Text from "@/ui/Text";
 import BlogRender from "@/components/blog/BolgRender";
 
 const Blog = () => {
-  const a = `<Text variant="header">hey</Text>
-  <Text variant="text">asd</Text>`;
-
   return (
     <>
       <main className="container min-h-screen">
