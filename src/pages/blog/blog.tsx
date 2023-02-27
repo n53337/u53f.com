@@ -13,7 +13,7 @@ const Blog = () => {
     <>
       <main className="container min-h-screen">
         <NavBar />
-        <BlogRender />
+        <BlogRender {...blogs[1]} />
       </main>
       <Footer />
     </>
