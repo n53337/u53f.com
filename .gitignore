@@ -31,3 +31,5 @@ firebase.json
 .firebaserc
 firebase.ts
 .firebase
+dist
+cors.json

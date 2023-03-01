@@ -2,9 +2,25 @@ import MDXComponent from "@/utils/MDXComponent";
 import me from "@/assets/me.png";
 import Text from "@/ui/Text";
 import { Blogs } from "@/utils/blogs";
-import { createElement } from "react";
+import { createElement, useEffect, useState } from "react";
+import { MDXProvider } from "@mdx-js/react";
+import { storage } from "@/utils/firebase";
+import { getDownloadURL, ref } from "firebase/storage";
+import { compile } from "@mdx-js/mdx";
+import kkk from "../../../mark.mdx";
 
 const BlogRender = ({ banner, content, date, readTime }: Blogs) => {
+  const [mdxFile, setMdxFile] = useState<any>();
+
+  useEffect(() => {
+    const fetchUrl = async () => {
+      const file = await fetch("../../../test.mdx");
+      const innerText = await file.text();
+      console.log(innerText);
+    };
+    fetchUrl();
+  }, []);
+
   return (
     <section className="flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-10">
       {/* Blog Content */}
@@ -14,7 +30,8 @@ const BlogRender = ({ banner, content, date, readTime }: Blogs) => {
         >
           <img src={banner} alt="project banner" />
         </figure>
-        {createElement(content, { components: MDXComponent })}
+        {/* {createElement("div", { components: MDXComponent }, mdxFile)} */}
+        {/* <MDXProvider>{mdxFile}</MDXProvider> */}
       </div>
 
       {/* Blog Stats */}
@@ -37,7 +54,8 @@ const BlogRender = ({ banner, content, date, readTime }: Blogs) => {
 
           <div>
             <Text variant="shell" className="italic">
-              {date}
+              {/* Date format */}
+              date
             </Text>
           </div>
           <div>

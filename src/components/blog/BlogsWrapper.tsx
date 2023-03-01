@@ -1,15 +1,28 @@
+import { useState } from "react";
 import Text from "@/ui/Text";
 import Button from "@/ui/Button";
 import { Link } from "react-router-dom";
-import { blogs } from "@/utils/blogs";
+// import { blogs } from "@/utils/blogs";
 import ShowCase from "../shared/ShowCase";
 import { useEffect } from "react";
+import { db } from "@/utils/firebase";
+import { getDocs, collection, DocumentData } from "firebase/firestore";
+import { Blogs } from "@/utils/blogs";
 
 const BlogsWrapper = () => {
+  const [blogs, setBlogs] = useState<Blogs[]>([]);
+
+  // Fetch Blogs
   useEffect(() => {
-    fetch("gs://u53f-ff584.appspot.com/blogs/react.mdx")
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+    const getBlogs = async () => {
+      const blogsHolder: any[] = [];
+      const querySnapshot = await getDocs(collection(db, "blogs"));
+      querySnapshot.forEach((doc) => {
+        blogsHolder.push(doc.data());
+        setBlogs(blogsHolder);
+      });
+    };
+    getBlogs();
   }, []);
 
   return (
@@ -28,7 +41,7 @@ const BlogsWrapper = () => {
               <>
                 <Text variant="title">{blog.title}</Text>
                 <Text variant="text">{blog.description}</Text>
-                <Link to={blog.id.replace(" ", "-")}>
+                <Link to={blog.id.replaceAll(" ", "-")}>
                   <Button variant="outline" text="Read" />
                 </Link>
               </>
