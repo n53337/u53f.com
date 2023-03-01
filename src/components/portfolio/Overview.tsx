@@ -71,7 +71,7 @@ const Overview = () => {
           Interested in doing a project together?
         </Text>
         <span className="hidden lg:block w-1/3 bg-gray-200 h-0.5"></span>
-        <Link to="contact">
+        <Link to="/contact">
           <Button variant="outline" text="Contact me" />
         </Link>
       </div>
