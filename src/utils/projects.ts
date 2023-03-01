@@ -50,7 +50,7 @@ export const projects: Projects[] = [
   {
     id: "minvoicer",
     brief: {
-      img: minvoicer,
+      img: min5,
       title: "Minvoicer",
       description:
         "This web application is a solution for automatically generating invoices with a nice user interface. I used React and Tailwind on Firebase. My mission for this project was to develop a full-stack application with the same design and business logic provided.",
