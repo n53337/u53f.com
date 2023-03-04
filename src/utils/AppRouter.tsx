@@ -1,5 +1,6 @@
+import About from "@/components/home/About";
 import Blogs from "@/pages/blog";
-import Blog from "@/pages/blog/blog";
+// import Blog from "@/pages/blog/blog";
 import Contact from "@/pages/contact";
 import Home from "@/pages/home";
 import Portfolio from "@/pages/portfolio";
@@ -25,7 +26,7 @@ const AppRouter = () => {
         {/* Blog */}
         <Route path="blog">
           <Route index element={<Blogs />} />
-          <Route path=":title" element={<Blog />} />
+          {/* <Route path=":title" element={<Blog />} /> */}
         </Route>
 
         {/* 404 */}
