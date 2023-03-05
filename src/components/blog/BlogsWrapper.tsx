@@ -20,7 +20,16 @@ const BlogsWrapper = () => {
             right={
               <>
                 <Text variant="title">{blog.title}</Text>
-                <Text variant="text">{blog.description}</Text>
+                <Text variant="text" className="xl:px-10 text-center">
+                  {blog.description}
+                </Text>
+                <div className="flex gap-4">
+                  {blog.tags?.map((tg) => (
+                    <Text variant="link" className="-mt-3">
+                      {tg}
+                    </Text>
+                  ))}
+                </div>
                 <Link to={blog.id.replace(" ", "-")}>
                   <Button variant="outline" text="Read" />
                 </Link>

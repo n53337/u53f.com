@@ -11,7 +11,7 @@ const ShowCase = ({ left, right, ...props }: SCProps) => {
       <div className="flex-1 flex flex-col justify-center items-center">
         {left}
       </div>
-      <div className="flex-1 p-6 flex flex-col gap-8 xl:gap-12 justify-center items-center ">
+      <div className="flex-1 p-6 flex flex-col gap-8 justify-center items-center ">
         {right}
       </div>
     </div>

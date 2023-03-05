@@ -4,7 +4,7 @@ import Text from "@/ui/Text";
 import { Blogs } from "@/utils/blogs";
 import { createElement } from "react";
 
-const BlogRender = ({ banner, content, date, readTime }: Blogs) => {
+const BlogRender = ({ banner, content, date, readTime, tags }: Blogs) => {
   return (
     <section className="py-2 lg:py-10 flex flex-col max-w-screen-md mx-auto">
       {/* Blog Stats */}
@@ -42,6 +42,13 @@ const BlogRender = ({ banner, content, date, readTime }: Blogs) => {
         >
           <img src={banner} alt="project banner" />
         </figure>
+        <div className="pt-6 w-full flex gap-4 justify-center">
+          {tags?.map((tg) => (
+            <Text variant="link" className="-mt-3">
+              {tg}
+            </Text>
+          ))}
+        </div>
         {createElement(content, { components: MDXComponent })}
       </div>
     </section>

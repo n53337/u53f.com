@@ -13,6 +13,7 @@ export interface Blogs {
   content: MDXContent;
   date: string;
   readTime: number;
+  tags?: string[];
 }
 
 export const blogs: Blogs[] = [
@@ -25,5 +26,6 @@ export const blogs: Blogs[] = [
     content: blog0,
     date: "March 05, 2023",
     readTime: 4,
+    tags: ["React", "Typescript", "MDX"],
   },
 ];
