@@ -1,0 +1,84 @@
+# How I Built My Website
+
+When it comes to building my website, I was thinking a lot, and I wanted to make something unique, but the problem with my ideas is that they are so complicated, and it will take a lot of time. So I decided to make something that functions well and has a minimalist look. And that's how I did it:
+
+## The stack
+
+This was an easy decision since I am using React for all of my recent projects. So I used these tools:
+
+`React`: A front-end library that allows you to build UI components and reuse them inside your application.
+
+`Typescript` is a really powerful language built on top of Javascript that allows you to get the benefits of a static programming language.
+
+`Tailwindcss` is a CSS library that is class-based and highly customizable for building great layouts.
+
+`MDX`: MDX allows you to use JSX in your markdown content.
+
+## Building the Layout
+
+I start the project by making a design system. so that includes UI components like buttons, text,etc...
+
+then making the app components, and here's how I structure my files:
+
+```bash
+
+
+   -src/
+
+      -components/
+
+      -ui/
+         -Button.tsx
+
+
+```
+
+Now it's time to start creating:
+
+I wanted the home page to be something attractive, so I built a mini terminal that shows something about me. Don't forget to check it out!
+
+The rest of the home page was a simple about me section.
+
+Moving to other pages, I made a [`portfolio`](https://u53f.com/portfolio) page, which basically shows some of my projects with some details.
+
+Also, a [`contact`](https://u53f.com/contact) page is important. I made a form that allows anyone to send me a message via email using the form. I am using [`Emaijs`](https://emailjs.com) for managing emails.
+
+Finally, the `blog` page, which I will talk about now.
+
+## How Did I Create My Blog?
+
+When I was building my website, I wanted to make a blog, and there are so many options to do that: Medium, Dev.to, etc.
+
+but I wanted something customized and integrated with my website, as well as something that I could write in `Markdown`.
+
+So I'm going to show you how my blog works so that you can build something similar.
+
+The context is to write some Markdown documents and display them as blogs. So I needed a markdown compiler to transform markdown to HTML with custom styling.
+
+I found this library called [`MDX`](https://mdxjs.com) that provides all those features that I mentioned.
+
+To get started with it, make sure you install all necessary dependencies `(@types/)`, which are required if you are using typescript; otherwise, just ignore it.
+
+```bash
+
+npm i @types/mdx @mdx-js/rollup @mdx-js/react
+
+```
+
+Now you can use markdown files inside your components just like this:
+
+```tsx
+import MDXProvider from "@mdx-js/react";
+
+import Post from "./post.mdx";
+
+<MDXProvider components={components}>
+   <Post /> 
+</MDXProvider>;
+```
+
+You can check out the whole code right [`here`](https://github.com/n53337/u53f.com)
+
+That's it, everyone. I hope you liked this one and gained some additional knowledge. I'll see you in the next one!
+
+![](https://media.tenor.com/9m9_eXtG0U8AAAAC/sponge.gif)
