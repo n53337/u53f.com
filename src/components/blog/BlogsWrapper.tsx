@@ -30,7 +30,7 @@ const BlogsWrapper = () => {
                     </Text>
                   ))}
                 </div>
-                <Link to={blog.id.replace(" ", "-")}>
+                <Link to={blog.id.replaceAll(" ", "-")}>
                   <Button variant="outline" text="Read" />
                 </Link>
               </>

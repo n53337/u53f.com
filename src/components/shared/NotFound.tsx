@@ -1,8 +1,12 @@
 import Text from "@/ui/Text";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
+import { useEffect } from "react";
 
 const NotFound = () => {
+  useEffect(() => {
+    document.title = "/dev/null";
+  }, []);
   return (
     <main className="h-screen flex flex-col justify-between items-center">
       <div className="container">

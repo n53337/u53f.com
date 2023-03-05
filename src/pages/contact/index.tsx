@@ -3,8 +3,13 @@ import Footer from "@/components/shared/Footer";
 import NavBar from "@/components/shared/NavBar";
 import Text from "@/ui/Text";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "contact@u53f";
+  }, []);
+
   return (
     <>
       <main className="container min-h-screen">

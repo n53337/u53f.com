@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Text from "@/ui/Text";
 import { Link } from "react-router-dom";
 import Button from "@/ui/Button";
+import { useEffect } from "react";
 
 const Overview = () => {
   // Get Url Parameter
@@ -11,7 +12,9 @@ const Overview = () => {
   // Project Data
   const [data] = projects.filter((prj) => prj.id === title);
 
-  console.log(data.overview.banner);
+  useEffect(() => {
+    document.title = `${title}@portfolio` || "Portfolio";
+  }, []);
 
   return (
     <section className="py-12 ">
