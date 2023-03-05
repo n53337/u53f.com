@@ -1,6 +1,6 @@
-import blogTumb0 from "@/assets/posts/how-i-built-my-website.png";
-
 import { MDXContent } from "mdx/types";
+
+import blogTumb0 from "@/assets/postsImages/how-i-built-my-website.png";
 import blog0 from "@/posts/how-i-built-my-website.mdx";
 
 // * Dummy data for Blogs
