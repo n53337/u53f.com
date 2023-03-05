@@ -1,5 +1,4 @@
-import cardsError from "@/assets/projects/min3.png";
-import blogTumb0 from "@/assets/posts/How i built my website.png";
+import blogTumb0 from "@/assets/posts/how-i-built-my-website.png";
 
 import { MDXContent } from "mdx/types";
 import blog0 from "@/posts/how-i-built-my-website.mdx";
