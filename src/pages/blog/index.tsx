@@ -1,20 +1,16 @@
 import NavBar from "@/components/shared/NavBar";
 import Footer from "@/components/shared/Footer";
-import Text from "@/ui/Text";
+import BlogsWrapper from "@/components/blog/BlogsWrapper";
 
 const Blogs = () => {
   return (
-    <main className="w-full h-screen flex flex-col justify-between">
-      <div className="container">
+    <>
+      <main className="container min-h-screen">
         <NavBar />
-      </div>
-      <div className="container">
-        <Text variant="header" className="text-center">
-          Comming Soon ...
-        </Text>
-      </div>
+        <BlogsWrapper />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 

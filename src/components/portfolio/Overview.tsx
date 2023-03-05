@@ -33,7 +33,7 @@ const Overview = () => {
                 <Text
                   key={tag}
                   variant="link"
-                  className="text-purple-900 cursor-help"
+                  className="text-gray-500 cursor-help"
                 >
                   {tag}
                 </Text>

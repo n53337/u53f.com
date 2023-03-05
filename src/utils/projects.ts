@@ -1,10 +1,4 @@
-// import uubank from "@/assets/projects/uubank-min.png";
-// import uubank2 from "@/assets/projects/uubank2-min.png";
-// import cardsError from "@/assets/projects/cardsError-min.png";
-// import cardsLoading from "@/assets/projects/cardsLoading-min.png";
-// import cardsSuccess from "@/assets/projects/cardsSuccess-min.png";
 import u53f2 from "@/assets/projects/u53f2.png";
-import minvoicer from "@/assets/projects/minvoicer.png";
 import min2 from "@/assets/projects/min2.png";
 import min3 from "@/assets/projects/min3.png";
 import min4 from "@/assets/projects/min4.png";
@@ -50,7 +44,7 @@ export const projects: Projects[] = [
   {
     id: "minvoicer",
     brief: {
-      img: min5,
+      img: min3,
       title: "Minvoicer",
       description:
         "This web application is a solution for automatically generating invoices with a nice user interface. I used React and Tailwind on Firebase. My mission for this project was to develop a full-stack application with the same design and business logic provided.",

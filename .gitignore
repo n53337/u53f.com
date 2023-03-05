@@ -33,3 +33,4 @@ firebase.ts
 .firebase
 dist
 cors.json
+posts

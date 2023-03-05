@@ -1,4 +1,4 @@
-import { ClipboardIcon, CommandLineIcon } from "@heroicons/react/24/solid";
+import { CommandLineIcon } from "@heroicons/react/24/solid";
 import React, { useEffect, useReducer, useRef, useState } from "react";
 import Text from "@/ui/Text";
 import { ActionReturns, ShellReducer } from "@/Store/ShellReducer";
