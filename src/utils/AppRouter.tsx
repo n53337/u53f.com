@@ -3,6 +3,7 @@ import Blogs from "@/pages/blog";
 import Blog from "@/pages/blog/blog";
 import Contact from "@/pages/contact";
 import Home from "@/pages/home";
+import Podcast from "@/pages/podcast";
 import Portfolio from "@/pages/portfolio";
 import View from "@/pages/portfolio/view";
 import { Route, Routes } from "react-router-dom";
@@ -28,6 +29,9 @@ const AppRouter = () => {
           <Route index element={<Blogs />} />
           <Route path=":title" element={<Blog />} />
         </Route>
+
+        {/* Podcast */}
+        <Route path="podcast" element={<Podcast />} />
 
         {/* 404 */}
         <Route path="*" element={<NotFound />} />

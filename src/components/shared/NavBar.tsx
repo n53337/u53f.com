@@ -31,6 +31,9 @@ const NavBar = () => {
         <Link to="/blog">
           <Text variant="link">blog</Text>
         </Link>
+        <Link to="/podcast">
+          <Text variant="link">podcast</Text>
+        </Link>
       </nav>
 
       {/* Mobile Navbar */}
