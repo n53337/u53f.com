@@ -1,3 +1,4 @@
+import u53f from "@/assets/projects/u53f.png";
 import u53f2 from "@/assets/projects/u53f2.png";
 import min2 from "@/assets/projects/min2.png";
 import min3 from "@/assets/projects/min3.png";
@@ -24,21 +25,18 @@ export const projects: Projects[] = [
   {
     id: "u53f",
     brief: {
-      img: "https://api.pikwy.com/web/63ff761d487e170bf42554b6.png",
+      img: u53f,
       title: "U53f.com",
       description:
         "This Project required me to build a fully responsive website. I used Reactjs, along with Typescript and Tailwind CSS, for the front-end. I will be using Firebase to generate blogs when I build the blog page.",
     },
     overview: {
-      banner: "https://api.pikwy.com/web/63ff761d487e170bf42554b6.png",
+      banner: u53f,
       url: "https://u53f.com/",
       tags: ["React", "Typescript", "Tailwind"],
       description:
         "This project was a full-stack portfolio. It’s a website that represents me and my work, as well as my blog. I make sure that everything is looking good and minimal, including the performance. Creating these types of projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
-      previews: [
-        "https://api.pikwy.com/web/63ff761d487e170bf42554b6.png",
-        u53f2,
-      ],
+      previews: [u53f, u53f2],
     },
   },
   {
