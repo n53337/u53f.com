@@ -40,6 +40,26 @@ export const projects: Projects[] = [
     },
   },
   {
+    id: "cards",
+    brief: {
+      img: "https://github.com/n53337/Interactive-card-details-form/raw/main/screenshot.jpg",
+      title: "Credit Card Form",
+      description:
+        "the goal of this project is to design and implement a user-friendly form that allows users to fill in their card details accurately and efficiently. The project aims to achieve this goal by providing real-time updates, error messages, optimal layout, and interactive element feedback. Ultimately, the project seeks to enhance the user experience of filling out the form.",
+    },
+    overview: {
+      banner:
+        "https://github.com/n53337/Interactive-card-details-form/raw/main/screenshot.jpg",
+      url: "https://fem-cards.netlify.app/",
+      tags: ["Html", "Sass", "Javascript"],
+      description:
+        "In order to provide a seamless user experience, there are several key features that users should be able to enjoy when filling out a form. Firstly, the form should update in real-time, allowing users to see the card details update as they fill in the necessary fields. Additionally, error messages should be displayed when the form is submitted if any input field is left empty or if the card number, expiry date, or CVC fields are not in the correct format. This will help users to quickly identify and correct any errors that may have occurred. Another important feature is the ability to view the optimal layout depending on their device's screen size. This ensures that users can easily navigate the form regardless of the device they are using. Lastly, users should be able to see hover, active, and focus states for interactive elements on the page. This provides visual feedback to the user and enhances their overall experience. By incorporating these features, users will be able to fill out the form quickly and accurately, resulting in a positive user experience.",
+      previews: [
+        "https://github.com/n53337/Interactive-card-details-form/raw/main/screenshot.jpg",
+      ],
+    },
+  },
+  {
     id: "minvoicer",
     brief: {
       img: min3,

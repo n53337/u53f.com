@@ -1,26 +1,24 @@
 import NavBar from "@/components/shared/NavBar";
 import Footer from "@/components/shared/Footer";
-import BlogsWrapper from "@/components/blog/BlogsWrapper";
 import { useEffect } from "react";
 import Text from "@/ui/Text";
+import PodcastWrapper from "@/components/podcast/PodcastWrapper";
 
 const Podcast = () => {
   useEffect(() => {
     document.title = "podcast@u53f";
   }, []);
   return (
-    <div className="h-screen flex flex-col">
-      <div className="container flex-1 flex flex-col">
+    <>
+      <main className="container min-h-screen">
         <NavBar />
-        <Text
-          variant="header"
-          className="text-center flex-1 flex flex-col justify-center"
-        >
-          Comming Soon ...
-        </Text>
-      </div>
+        {/* <PodcastWrapper /> */}
+        <div className="flex justify-center items-center h-screen">
+          <Text variant="title">Comming Soon...</Text>
+        </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
