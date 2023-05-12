@@ -1,6 +1,3 @@
----
-title: u53f.com
----
 
 # U53F.com
 
@@ -34,21 +31,21 @@ To get a local copy of the project up and running, follow these steps:
    
 2. Navigate to the project directory:
 
-  ```bash
-  cd u53f.com
-  ```
+   ```bash
+   cd u53f.com
+   ```
   
 3. Install the dependencies:
 
-  ```bash
-  npm install
-  ```
+   ```bash
+   npm install
+   ```
   
 4. Start the development server:
 
-  ```bash
-  npm dev
-  ```
+   ```bash
+   npm dev
+   ```
 This command will start the development server and open the website in your default browser. Any changes you make to the code will automatically reload the page.
 
 ## Contributing
