@@ -41,7 +41,7 @@ export const ShellReducer = (
         command: "skills",
         type: "text",
         output: [
-          "I am very comfortable with web technologies, especially with React, Typescript, Tailwind CSS, SCSS, and many more. But the thing is that I am learning things quickly.",
+          "I possess a high level of proficiency in various web technologies, with a particular focus on React, Typescript, Tailwind CSS, SCSS, and a plethora of others.",
         ],
       };
       return returnedData;
@@ -53,7 +53,7 @@ export const ShellReducer = (
         command: "setup",
         type: "text",
         output: [
-          "I am using Arch BTW. I love coding with Neovim, but for web projects, I use VS Code with the Vim Extension! ",
+          "I utilize Arch BTW as my operating system of choice. While coding, I find great satisfaction in leveraging the power of Neovim. However, for web development projects, I rely on the Vim Extension within the VS Code environment. ",
         ],
       };
       return returnedData;
@@ -70,7 +70,7 @@ export const ShellReducer = (
         command: action.command,
         type: "error",
         output: [
-          `Sorry, this command was not found. Enter "help" to show all possible commands!`,
+          `Apologies, but the command you entered could not be found. Please enter "help" to display a comprehensive list of available commands.`,
         ],
       };
       return returnedData;
