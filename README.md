@@ -1,6 +1,8 @@
 
 # U53F.com
 
+## ❕ THIS WEBSITE IS NOT LONGER MANTAINED, HERE'S THE [NEW ONE](https://usef.site) 
+
 Welcome to the repository for my personal website, [u53f.com](https://www.u53f.com/)! This website serves as a showcase of my skills, projects, and experiences as a front-end developer. Feel free to explore the code and use it as a reference or starting point for your own projects.
 
 ## Technologies Used
